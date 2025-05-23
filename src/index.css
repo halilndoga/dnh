@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gradient-to-br from-primary-50 to-secondary-50 min-h-screen font-sans;
+    background-attachment: fixed;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-handwritten;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-6 py-2 rounded-full font-handwritten text-lg transition-all transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+  
+  .btn-primary {
+    @apply btn bg-primary-400 text-white hover:bg-primary-500 focus:ring-primary-400;
+  }
+  
+  .btn-secondary {
+    @apply btn bg-secondary-400 text-white hover:bg-secondary-500 focus:ring-secondary-400;
+  }
+  
+  .btn-accent {
+    @apply btn bg-accent-400 text-white hover:bg-accent-500 focus:ring-accent-400;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-md p-4 transform transition-all hover:shadow-lg;
+  }
+  
+  .sticky-note {
+    @apply rounded-md p-4 shadow-md transform transition-all cursor-move;
+  }
+  
+  .sticky-note-pink {
+    @apply bg-primary-100 hover:bg-primary-200;
+  }
+  
+  .sticky-note-purple {
+    @apply bg-secondary-100 hover:bg-secondary-200;
+  }
+  
+  .sticky-note-blue {
+    @apply bg-accent-100 hover:bg-accent-200;
+  }
+  
+  .sticky-note-yellow {
+    @apply bg-yellow-100 hover:bg-yellow-200;
+  }
+  
+  .polaroid {
+    @apply bg-white p-3 shadow-polaroid transform transition-all hover:scale-[1.02] hover:rotate-1;
+  }
+  
+  .heart-beat {
+    animation: heartBeat 1.5s ease-in-out infinite;
+  }
+  
+  @keyframes heartBeat {
+    0% { transform: scale(1); }
+    14% { transform: scale(1.15); }
+    28% { transform: scale(1); }
+    42% { transform: scale(1.15); }
+    70% { transform: scale(1); }
+  }
+}
